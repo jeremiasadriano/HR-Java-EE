@@ -1,34 +1,65 @@
-ul,
-ol {
-  list-style: none;
+header {
+	background-color: #15074e;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	position: fixed;
+	top: 1%;
+	left: 0.5%;
+	width: 99%;
+	height: 100px;
+	border-radius: 1.9rem;
+	z-index: 1;
 }
 
+ul,
+ol {
+	list-style: none;
+}
+
+#titulo {
+	display: flex;
+	justify-content: center;
+	gap: 5rem;
+}
+#titulo input[type="search"] {
+	width: 100%;
+	height: 100%;
+	border: none;
+	background-color: #210f6b;
+	color: white;
+	border-radius: 0.9rem;
+	font-size: 1rem;
+	outline: none;
+}
+#titulo input[type="search"]::placeholder {
+	color: white;
+}
 .top-menu {
-  color: #F9F9FC;
-  padding: 0 2rem;
-  background-color: #15074e;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
+	color: #f9f9fc;
+	padding: 0 2rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 .top-menu ul {
-  display: flex;
-  height: 100%;
+	display: flex;
+	height: 100%;
 }
 .top-menu ul li {
-  margin: 0.5rem 1rem;
+	margin: 0.5rem 1rem;
 }
 .top-menu ul li form button {
-  text-transform: uppercase;
-  color: #F9F9FC;
-  font-weight: bold;
-  border: none;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  background-color: #210f6b;
-  transition: all 0.5s ease;
+	text-transform: uppercase;
+	color: #f9f9fc;
+	font-weight: bold;
+	border: none;
+	padding: 1rem;
+	border-radius: 0.9rem;
+	background-color: #210f6b;
+	transition: all 0.5s ease;
+	cursor: pointer;
 }
 .top-menu ul li form button .fa-solid {
-  margin-right: 0.5rem;
+	margin-right: 0.5rem;
 }
