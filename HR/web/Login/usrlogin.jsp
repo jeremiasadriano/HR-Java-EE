@@ -29,6 +29,8 @@
                     RequestDispatcher rd = request.getRequestDispatcher("Home.html");
                     rd.forward(request, response);
                 } else {
+                 RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
+                    rd.forward(request, response);
                 }
         
         %>
