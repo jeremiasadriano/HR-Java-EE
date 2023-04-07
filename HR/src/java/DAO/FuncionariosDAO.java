@@ -32,7 +32,7 @@ public class FuncionariosDAO {
             prepS.close();
 
         } catch (SQLException e) {
-            // TODO: handle exception
+            
         }
 
     }
