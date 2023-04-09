@@ -6,7 +6,8 @@
 
 <%@page import="DAO.FuncionariosDAO"%>
 <%@page import="DTO.FuncionariosDTO"%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -14,23 +15,30 @@
         <title>Cadastrar Funcionario</title>
     </head>
     <body>
-        
+
         <%
-           try {
-           FuncionariosDTO objFuncionariosDTO = new FuncionariosDTO();
-           objFuncionariosDTO.setNome(request.getParameter("nome"));
-           objFuncionariosDTO.setIdade(Integer.parseInt(request.getParameter("idade")));
-           objFuncionariosDTO.setSexo(request.getParameter("sexo"));
-           objFuncionariosDTO.setEmail(request.getParameter("email"));
-           objFuncionariosDTO.setCargo(request.getParameter("cargo"));
-           objFuncionariosDTO.setTelefone(request.getParameter("telefone"));
-           
-           FuncionariosDAO objFuncionariosDAO = new FuncionariosDAO();
-           objFuncionariosDAO.Cadastrar(objFuncionariosDTO);
-               } catch (Exception e) {
-               }
-            
-         %>
-        
+            try {
+                FuncionariosDTO objFuncionariosDTO = new FuncionariosDTO();
+                if (!(request.getParameter("nome") == null && request.getParameter("idade") == null
+                        && request.getParameter("sexo") == null && request.getParameter("email") == null
+                        && request.getParameter("cargo") == null && request.getParameter("terlefone") == null)) {
+                    objFuncionariosDTO.setNome(request.getParameter("nome"));
+                    objFuncionariosDTO.setIdade(Integer.parseInt(request.getParameter("idade")));
+                    objFuncionariosDTO.setSexo(request.getParameter("sexo"));
+                    objFuncionariosDTO.setEmail(request.getParameter("email"));
+                    objFuncionariosDTO.setCargo(request.getParameter("cargo"));
+                    objFuncionariosDTO.setTelefone(request.getParameter("telefone"));
+
+                    FuncionariosDAO objFuncionariosDAO = new FuncionariosDAO();
+                    objFuncionariosDAO.Cadastrar(objFuncionariosDTO);
+
+                }
+            } catch (Exception e) {
+                RequestDispatcher rd = request.getRequestDispatcher("Funcionarios.jsp");
+            }
+
+            response.sendRedirect("TelaFuncionarios.jsp");
+        %>
+
     </body>
 </html>

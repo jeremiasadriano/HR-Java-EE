@@ -1,0 +1,96 @@
+.listaFunc{
+    padding: 1rem;
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.master-card{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 1rem;
+  word-wrap: break-word;
+  border: none;
+}
+
+
+.card-container{
+  position: relative;
+  margin: 1.5rem;
+  display: flex;
+  background-color: #f9f9fc;
+  flex-direction: column;
+  padding: 0.5rem;
+  border: solid 1px rgb(143, 143, 143);
+  border-radius: 1.5rem;
+  align-items: center;
+  font-size: 1.5rem;
+  min-width: 20rem;
+  word-wrap: break-word;
+  text-align: center;
+}
+
+.card-container div{
+  margin-top: 1rem;
+}
+
+.card-image{
+    height: 6rem;
+    width: 6rem;
+    border: none;
+    border-radius: 50%;
+}
+
+.card-image img{
+  width: 100%;
+  border-radius: 50%;
+}
+
+.card-image div{
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0.5rem;
+
+}
+
+.card-image div button,.card-image div form button{
+  cursor: pointer;
+  padding: 0.5rem;
+  background-color: green;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  color: #f9f9fc;
+  margin: 0.2rem;
+}
+
+.card-image div button:last-child{
+  background-color: red;
+}
+
+
+.card-name{
+  font-weight: bold;
+  height: auto;
+}
+
+.card-cargo{
+  background-color: #d1cbf5;
+  color: #525050;
+  padding: 0.6rem;
+  border-radius: 1.4rem;
+}
+.card-telefone{
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.card-email{
+  color: #0000ffbe;
+  margin-bottom: 1rem;
+}
+
+button:hover{
+  box-shadow: 0 0 20px 0 rgba(124, 102, 214, 0.644);
+}

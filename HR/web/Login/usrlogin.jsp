@@ -26,7 +26,7 @@
             ResultSet rSetUSR = objUsuariosDAO.LoginUsr(objUsuariosDTO);
             
             if (rSetUSR.next()) {
-                    RequestDispatcher rd = request.getRequestDispatcher("Home.html");
+                    RequestDispatcher rd = request.getRequestDispatcher("home.jsp");
                     rd.forward(request, response);
                 } else {
                  RequestDispatcher rd = request.getRequestDispatcher("login.jsp");

@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.top-menu {
+  color: #F9F9FC;
+  padding: 0 2rem;
+  background-color: #15074e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.top-menu ul {
+  display: flex;
+  height: 100%;
+}
+.top-menu ul li {
+  margin: 0.5rem 1rem;
+}
+.top-menu ul li form button {
+  text-transform: uppercase;
+  color: #F9F9FC;
+  font-weight: bold;
+  border: none;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: #210f6b;
+  transition: all 0.5s ease;
+}
+.top-menu ul li form button .fa-solid {
+  margin-right: 0.5rem;
+}
+
+.second-menu {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.search-area .search-form {
+  border: 1px solid #15074e;
+  display: flex;
+  flex-grow: 1;
+  border-radius: 1.5rem;
+}
+.search-area .search-form .search-bar {
+  margin: 0.2rem 1rem;
+  border: none;
+  font-size: 1rem;
+}
+.search-area .search-form .search-submit {
+  margin: 0.2rem;
+  font-size: 1rem;
+  padding: 0.5rem;
+  background-color: #15074e;
+  color: #F9F9FC;
+  border: none;
+  border-radius: 100vh;
+}
+
+.search-area .search-form .search-bar:focus {
+  outline: 0;
+}
+
+.list-buttons-second-menu{
+    width: 20%;
+    height: 100%;
+}
+.list-buttons-second-menu ul {
+  display: flex;
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.list-buttons-second-menu ul li form button{
+    background-color: #15074e;
+    color: #F9F9FC;
+     font-weight: bold;
+    padding: 1rem;
+    border: none;
+    border-radius: 2rem;
+    transition: all 0.5s ease;
+}
+
+.list-buttons-second-menu ul li:first-child form button{
+   
+    background-color: #8675EB;
+}
+
+.list-buttons-second-menu ul li form button .fa-clock{
+    margin-right: 0.5rem;
+}
+
+.top-menu ul li form button:hover,
+.list-buttons-second-menu ul li form button:hover {
+  background: #ff4500;
+}
+
+
