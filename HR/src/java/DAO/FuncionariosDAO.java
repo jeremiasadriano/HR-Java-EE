@@ -87,5 +87,29 @@ public class FuncionariosDAO {
 
     }
 
+        public void Alterar(FuncionariosDTO objFuncionariosDTO) throws ClassNotFoundException {
+        String sql = "update from tbFuncionarios set Nome=?, Idade=?, Sexo=?, Email=?, Cargo=?, Departamento=?, Telefone=? where Id_Funcionario=?";
+        conexao = new ConexaoDAO().conexaoBD();
+
+        try {
+            prepS = conexao.prepareStatement(sql);
+
+            prepS.setString(1, objFuncionariosDTO.getNome());
+            prepS.setInt(2, objFuncionariosDTO.getIdade());
+            prepS.setString(3, objFuncionariosDTO.getSexo());
+            prepS.setString(4, objFuncionariosDTO.getEmail());
+            prepS.setString(5, objFuncionariosDTO.getCargo());
+            prepS.setString(6, objFuncionariosDTO.getDepartamento());
+            prepS.setString(7, objFuncionariosDTO.getTelefone());
+            prepS.setInt(8, objFuncionariosDTO.getIdFuncionario());
+
+            prepS.execute();
+            prepS.close();
+
+        } catch (SQLException e) {
+
+        }
+
+    }
 
 }

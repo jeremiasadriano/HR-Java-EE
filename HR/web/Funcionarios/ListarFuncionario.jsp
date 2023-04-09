@@ -28,12 +28,25 @@
                         out.print("Sexo: " + lista.get(i).getSexo() + "<br>");
                         out.print("E-mail: " + lista.get(i).getEmail() + "<br>");
                         out.print("Cargo: " + lista.get(i).getCargo() + "<br>");
+                        out.print("Departamento: " + lista.get(i).getDepartamento() + "<br>");
                         out.print("Telefone: " + lista.get(i).getTelefone() + "<br>");
                         
                         out.print("<a href='ExcluirForm.jsp?id=" +
                         lista.get(i).getIdFuncionario() + "&nome=" +
                         lista.get(i).getNome() + "&cargo=" +
                         lista.get(i).getCargo() + "'> Remover </a>");
+                        %> <span></span>
+                        <span></span>
+                        <%
+                        out.print("<a href='AlterarForm.jsp?id=" +
+                        lista.get(i).getIdFuncionario() + "&nome=" +
+                        lista.get(i).getNome() + "&idade=" +
+                        lista.get(i).getIdade() + "&sexo=" +
+                        lista.get(i).getSexo() + "&Email=" +
+                        lista.get(i).getEmail() + "&cargo=" +
+                        lista.get(i).getCargo() + "&departamento=" +
+                        lista.get(i).getDepartamento() + "&telefone=" +
+                        lista.get(i).getTelefone() + "'> Alterar </a>");
 
                      %><br><br><%   
                     }

@@ -23,6 +23,7 @@
            objFuncionariosDTO.setSexo(request.getParameter("sexo"));
            objFuncionariosDTO.setEmail(request.getParameter("email"));
            objFuncionariosDTO.setCargo(request.getParameter("cargo"));
+           objFuncionariosDTO.setDepartamento(request.getParameter("departamento"));
            objFuncionariosDTO.setTelefone(request.getParameter("telefone"));
            
            FuncionariosDAO objFuncionariosDAO = new FuncionariosDAO();
