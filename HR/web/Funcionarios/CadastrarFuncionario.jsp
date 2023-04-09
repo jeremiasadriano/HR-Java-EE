@@ -16,31 +16,24 @@
     <body>
         
         <%
-            try {
-                FuncionariosDTO objFuncionariosDTO = new FuncionariosDTO();
-                if (!(request.getParameter("nome") == null && request.getParameter("idade") == null
-                        && request.getParameter("sexo") == null && request.getParameter("email") == null
-                        && request.getParameter("cargo") == null && request.getParameter("terlefone") == null
-                        && request.getParameter("departamento") == null)) {
-                        
-                    objFuncionariosDTO.setNome(request.getParameter("nome"));
-                    objFuncionariosDTO.setIdade(Integer.parseInt(request.getParameter("idade")));
-                    objFuncionariosDTO.setSexo(request.getParameter("sexo"));
-                    objFuncionariosDTO.setEmail(request.getParameter("email"));
-                    objFuncionariosDTO.setCargo(request.getParameter("cargo"));
-                    objFuncionariosDTO.setTelefone(request.getParameter("telefone"));
-                    objFuncionariosDTO.setDepartamento(request.getParameter("departamento"));
-
-                    FuncionariosDAO objFuncionariosDAO = new FuncionariosDAO();
-                    objFuncionariosDAO.Cadastrar(objFuncionariosDTO);
-
-                }
-            } catch (Exception e) {
-                RequestDispatcher rd = request.getRequestDispatcher("Funcionarios.jsp");
-            }
-
-            response.sendRedirect("TelaFuncionarios.jsp");
-        %>
-
+           try {
+           FuncionariosDTO objFuncionariosDTO = new FuncionariosDTO();
+           objFuncionariosDTO.setNome(request.getParameter("nome"));
+           objFuncionariosDTO.setIdade(Integer.parseInt(request.getParameter("idade")));
+           objFuncionariosDTO.setSexo(request.getParameter("sexo"));
+           objFuncionariosDTO.setEmail(request.getParameter("email"));
+           objFuncionariosDTO.setCargo(request.getParameter("cargo"));
+           objFuncionariosDTO.setDepartamento(request.getParameter("departamento"));
+           objFuncionariosDTO.setTelefone(request.getParameter("telefone"));
+           
+           FuncionariosDAO objFuncionariosDAO = new FuncionariosDAO();
+           objFuncionariosDAO.Cadastrar(objFuncionariosDTO);
+           
+            response.sendRedirect("ListarFuncionario.jsp");
+               } catch (Exception e) {
+               }
+            
+         %>
+        
     </body>
 </html>
