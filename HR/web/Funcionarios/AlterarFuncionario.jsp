@@ -18,7 +18,13 @@
            try {
            FuncionariosDTO objFuncionariosDTO = new FuncionariosDTO();
            objFuncionariosDTO.setIdFuncionario(Integer.parseInt(request.getParameter("id")));
-
+           objFuncionariosDTO.setNome(request.getParameter("nome"));
+           objFuncionariosDTO.setIdade(Integer.parseInt(request.getParameter("idade")));
+           objFuncionariosDTO.setSexo(request.getParameter("sexo"));
+           objFuncionariosDTO.setEmail(request.getParameter("email"));
+           objFuncionariosDTO.setCargo(request.getParameter("cargo"));
+           objFuncionariosDTO.setTelefone(request.getParameter("telefone"));
+           objFuncionariosDTO.setDepartamento(request.getParameter("departamento"));
            
            FuncionariosDAO objFuncionariosDAO = new FuncionariosDAO();
            objFuncionariosDAO.Alterar(objFuncionariosDTO);

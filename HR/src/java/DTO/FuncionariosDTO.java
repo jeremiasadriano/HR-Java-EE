@@ -9,6 +9,7 @@ public class FuncionariosDTO {
     private String Cargo;
     private String Departamento;
     private String Telefone;
+    private String Departamento;
 
 //    public FuncionariosDTO(int idFuncionario, String nome, int idade, String sexo, String email, String cargo,
 //            String telefone) {
@@ -20,6 +21,14 @@ public class FuncionariosDTO {
 //        Cargo = cargo;
 //        Telefone = telefone;
 //    }
+
+    public String getDepartamento() {
+        return Departamento;
+    }
+
+    public void setDepartamento(String Departamento) {
+        this.Departamento = Departamento;
+    }
 
     
     public int getIdFuncionario() {
