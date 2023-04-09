@@ -13,6 +13,7 @@ Id_Departamento varchar (20) not null unique,
 Nome_Departamento varchar(50) primary key
 );
 
+
 insert into tbDepartamentos values ("MTM", "Multimedia");
 insert into tbDepartamentos values ("IT","Tecnologia");
 
