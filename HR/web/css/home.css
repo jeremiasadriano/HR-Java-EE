@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.slideshow-container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  user-select: none;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  height: 100%;
+  width: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+.mySlides img{
+  width: 100%;
+  object-fit: contain;
+  overflow-y: hidden;
+  filter: brightness(30%);
+}
+
+.main-buttons{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  color: #f9f9fc;
+  padding: 2rem;
+
+}
+
+.main-buttons h2{
+  text-align: center;
+  font-size: 5rem;
+}
+
+.motivacao{
+  padding: 2rem;
+  margin: 10rem auto 0 auto;
+  font-size: 2rem;
+  width: 65%;
+  text-align: justify;
+}
+
+.buttons{
+  width: 30rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.buttons form{
+  margin-top: 1rem;
+}
+
+.buttons form button{
+  padding: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.5);
+  transition: all 0.5s ease;
+}
+.buttons form button .fa-solid{
+  margin-right: 0.5rem;
+}
+
+.buttons form button:hover{
+  background-color: #15074e;
+  color: #f9f9fc;
+  box-shadow: 0 0 20px 0 rgba(124, 102, 214, 0.644);
+}
+

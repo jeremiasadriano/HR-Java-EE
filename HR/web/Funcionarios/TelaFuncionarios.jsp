@@ -86,7 +86,7 @@
                     <div class="card-image">
                         <img src="../img/profilee.png" alt="" />
                         <div>
-                            <form action="EditarForm.jsp">
+                            <form action="EditarForm.jsp" method="POST">
                                 <input type="hidden" name="id" value="<%= f.getIdFuncionario()%>" />
                                 <input type="hidden" name="nome" value="<%=f.getNome()%>" />
                                 <input type="hidden" name="idade" value="<%=f.getIdade()%>" />

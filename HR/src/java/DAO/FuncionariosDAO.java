@@ -1,28 +1,18 @@
 package DAO;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 
 import DTO.FuncionariosDTO;
-import java.util.ArrayList;
+import java.util.*;
 
 public class FuncionariosDAO {
 
     Connection conexao;
     PreparedStatement prepS;
-<<<<<<< Updated upstream
-    ResultSet rSet;  
-   
-    public void Cadastrar(FuncionariosDTO objFuncionariosDTO) throws ClassNotFoundException{
-        String sql = "insert into tbFuncionarios(Nome, Idade, Sexo, Email, Cargo, Telefone) values(?,?,?,?,?,?)";
-=======
     ResultSet rSet;
 
     public void Cadastrar(FuncionariosDTO objFuncionariosDTO) throws ClassNotFoundException {
         String sql = "insert into tbFuncionarios(Nome, Idade, Sexo, Email, Cargo, Telefone, Departamento) values(?,?,?,?,?,?,?)";
->>>>>>> Stashed changes
         conexao = new ConexaoDAO().conexaoBD();
 
         try {
@@ -34,10 +24,7 @@ public class FuncionariosDAO {
             prepS.setString(4, objFuncionariosDTO.getEmail());
             prepS.setString(5, objFuncionariosDTO.getCargo());
             prepS.setString(6, objFuncionariosDTO.getTelefone());
-<<<<<<< Updated upstream
-=======
             prepS.setString(7, objFuncionariosDTO.getDepartamento());
->>>>>>> Stashed changes
 
             prepS.execute();
             prepS.close();
@@ -48,35 +35,6 @@ public class FuncionariosDAO {
 
     }
 
-<<<<<<< Updated upstream
-   public List<FuncionariosDTO> listarFuncionarios() throws SQLException, ClassNotFoundException {
-       
-        List<FuncionariosDTO> listaFuncionarios = new ArrayList<>();
-       
-        String sql = "SELECT * FROM tbfuncionarios";
-        conexao = new ConexaoDAO().conexaoBD();
-
-        prepS = conexao.prepareStatement(sql);
-        rSet = prepS.executeQuery(sql);
-        try {
-            while (rSet.next()) {
-                FuncionariosDTO objFuncionariosDTO = new FuncionariosDTO();
-                objFuncionariosDTO.setIdFuncionario(rSet.getInt("Id_Funcionario"));;
-                objFuncionariosDTO.setNome(rSet.getString("Nome"));
-                objFuncionariosDTO.setIdade(rSet.getInt("Idade"));
-                objFuncionariosDTO.setSexo(rSet.getString("Sexo"));
-                objFuncionariosDTO.setEmail(rSet.getString("Email"));
-                objFuncionariosDTO.setCargo(rSet.getString("Cargo"));
-                objFuncionariosDTO.setDepartamento(rSet.getString("Departamento"));
-                objFuncionariosDTO.setTelefone(rSet.getString("Telefone"));
-
-                // lista para armazenar cada linha da tabela
-                ListaFuncionarios.add(objFuncionariosDTO);
-            }
-        }catch(Exception e){
-            
-        }finally{
-=======
     public List<FuncionariosDTO> listarFuncionarios() throws SQLException, ClassNotFoundException {
 
         List<FuncionariosDTO> listaFuncionarios = new ArrayList<>();
@@ -116,7 +74,6 @@ public class FuncionariosDAO {
         } catch (Exception e) {
 
         } finally {
->>>>>>> Stashed changes
             stmt.close();
             rs.close();
             conexao.close();
@@ -124,13 +81,8 @@ public class FuncionariosDAO {
 
         return listaFuncionarios;
     }
-<<<<<<< Updated upstream
-   
-     public void Remover(FuncionariosDTO objFuncionariosDTO) throws ClassNotFoundException {
-=======
 
     public void Remover(FuncionariosDTO objFuncionariosDTO) throws ClassNotFoundException {
->>>>>>> Stashed changes
         String sql = "delete from tbFuncionarios where Id_Funcionario=?";
         conexao = new ConexaoDAO().conexaoBD();
 
@@ -147,32 +99,13 @@ public class FuncionariosDAO {
         }
 
     }
-     
-    public void editarFuncionarios(FuncionariosDTO objFuncionariosDTO) throws ClassNotFoundException {
-    String sql = "update tbfuncionarios set Nome=?, Idade=?, Sexo=?, Email=?, Cargo=?, Telefone=? where Id_Funcionario=?";
-    conexao = new ConexaoDAO().conexaoBD();
+ 
 
-<<<<<<< Updated upstream
-    try {
-        prepS = conexao.prepareStatement(sql);
-=======
     public void editarFuncionarios(FuncionariosDTO objFuncionariosDTO) throws ClassNotFoundException {
         String sql = "update tbfuncionarios set Nome=?, Idade=?, Sexo=?, Email=?, Cargo=?, Telefone=?, Departamento=? where Id_Funcionario=?";
         conexao = new ConexaoDAO().conexaoBD();
->>>>>>> Stashed changes
 
-        prepS.setString(1, objFuncionariosDTO.getNome());
-        prepS.setInt(2, objFuncionariosDTO.getIdade());
-        prepS.setString(3, objFuncionariosDTO.getSexo());
-        prepS.setString(4, objFuncionariosDTO.getEmail());
-        prepS.setString(5, objFuncionariosDTO.getCargo());
-        prepS.setString(6, objFuncionariosDTO.getTelefone());
-        prepS.setInt(7, objFuncionariosDTO.getIdFuncionario());
-
-<<<<<<< Updated upstream
-        prepS.execute();
-        prepS.close();
-=======
+        try{
             prepS.setString(1, objFuncionariosDTO.getNome());
             prepS.setInt(2, objFuncionariosDTO.getIdade());
             prepS.setString(3, objFuncionariosDTO.getSexo());
@@ -181,10 +114,13 @@ public class FuncionariosDAO {
             prepS.setString(6, objFuncionariosDTO.getTelefone());
              prepS.setString(7, objFuncionariosDTO.getDepartamento());
             prepS.setInt(8, objFuncionariosDTO.getIdFuncionario());
->>>>>>> Stashed changes
 
-    } catch (SQLException e) {
+            prepS.execute();
+            prepS.close();
 
+        } catch (SQLException e) {
+
+        }
     }
 
     public List<FuncionariosDTO> pesquisarFuncionarios( String valor) throws SQLException, ClassNotFoundException {
@@ -236,4 +172,4 @@ public class FuncionariosDAO {
 
 }
 
-}
+

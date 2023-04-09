@@ -42,19 +42,17 @@ form div label {
   font-weight: bold;
 }
 
-form>div>input,
-p, select {
+form > div > input,
+p,
+select {
   background: transparent;
   color: #ccc;
   font-size: 1.5rem;
   border: none;
   outline: none;
   margin-left: 2rem;
-<<<<<<< Updated upstream
-=======
   border-bottom: 1px solid #8675eb;
   min-width: fit-content;
->>>>>>> Stashed changes
 }
 
 form:first-child button {
@@ -71,24 +69,19 @@ form:first-child button {
   margin: 0 20%;
 }
 
-.voltar{
+.voltar {
   position: absolute;
   cursor: pointer;
   font-weight: bold;
   text-transform: uppercase;
   padding: 3rem;
   border: none;
-<<<<<<< Updated upstream
-  bottom: 7.7rem;
-=======
   bottom: 11rem;
->>>>>>> Stashed changes
   left: 60rem;
   border-radius: 1rem;
   color: #f9f9fc;
   background-color: rgba(41, 138, 12, 0.747);
 }
-
 
 button:hover {
   box-shadow: 0 0 20px 0 rgba(124, 102, 214, 0.644);

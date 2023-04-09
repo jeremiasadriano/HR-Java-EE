@@ -52,14 +52,11 @@
         <label for="txttelefone">Telefone:</label>
         <input type="text" name="telefone" id="txttelefone" value="<%= request.getParameter("telefone")%>" required/>
       </div>
-<<<<<<< Updated upstream
-=======
       
       <div>
         <label for="txtdepartamento">Departamento:</label>
         <input type="text" name="departamento" id="txttelefone" value="<%= request.getParameter("departamento")%>" required/>
       </div>
->>>>>>> Stashed changes
       <button>Submeter</button>
     </form>
     <form action="TelaFuncionarios.jsp">
