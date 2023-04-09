@@ -4,6 +4,8 @@
     Author     : Pedro Nhamirre
 --%>
 
+<%@page import="DAO.FuncionariosDAO"%>
+<%@page import="DTO.FuncionariosDTO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -12,28 +14,22 @@
         <title>JSP Page</title>
     </head>
     <body>
+        
         <%
-            int id = Integer.parseInt(request.getParameter("id"));
-            String nome = request.getParameter("nome");
-            int idade = Integer.parseInt(request.getParameter("idade"));
-            String sexo = request.getParameter("sexo");
-            String email = request.getParameter("email");
-            String cargo = request.getParameter("cargo");
-            String telefone = request.getParameter("telefone");
-            
-    
-            // Processa os dados
-            // ...
+           try {
+           FuncionariosDTO objFuncionariosDTO = new FuncionariosDTO();
+           objFuncionariosDTO.setIdFuncionario(Integer.parseInt(request.getParameter("id")));
 
-            // Redireciona o fluxo de controle de volta para a página JSP, passando as variáveis ou objetos que você processou
-            request.setAttribute("id", id);
-            request.setAttribute("nome", nome);
-            request.setAttribute("sexo", sexo);
-            request.setAttribute("email", email);
-            request.setAttribute("cargo", cargo);
-            request.setAttribute("telefone", telefone);
+           
+           FuncionariosDAO objFuncionariosDAO = new FuncionariosDAO();
+           objFuncionariosDAO.Remover(objFuncionariosDTO);
+           
+           RequestDispatcher rd = request.getRequestDispatcher("TelaFuncionario.jsp");
+           rd.forward(request, response);
+               } catch (Exception e) {
+               }
             
-            request.getRequestDispatcher("TelaFuncionarios.jsp").forward(request, response);
+         %>
 
         %>
     </body>
