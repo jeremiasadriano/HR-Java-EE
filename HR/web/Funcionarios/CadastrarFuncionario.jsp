@@ -20,23 +20,16 @@
                 FuncionariosDTO objFuncionariosDTO = new FuncionariosDTO();
                 if (!(request.getParameter("nome") == null && request.getParameter("idade") == null
                         && request.getParameter("sexo") == null && request.getParameter("email") == null
-<<<<<<< Updated upstream
-                        && request.getParameter("cargo") == null && request.getParameter("terlefone") == null)) {
-=======
                         && request.getParameter("cargo") == null && request.getParameter("terlefone") == null
                         && request.getParameter("departamento") == null)) {
                         
->>>>>>> Stashed changes
                     objFuncionariosDTO.setNome(request.getParameter("nome"));
                     objFuncionariosDTO.setIdade(Integer.parseInt(request.getParameter("idade")));
                     objFuncionariosDTO.setSexo(request.getParameter("sexo"));
                     objFuncionariosDTO.setEmail(request.getParameter("email"));
                     objFuncionariosDTO.setCargo(request.getParameter("cargo"));
                     objFuncionariosDTO.setTelefone(request.getParameter("telefone"));
-<<<<<<< Updated upstream
-=======
                     objFuncionariosDTO.setDepartamento(request.getParameter("departamento"));
->>>>>>> Stashed changes
 
                     FuncionariosDAO objFuncionariosDAO = new FuncionariosDAO();
                     objFuncionariosDAO.Cadastrar(objFuncionariosDTO);
