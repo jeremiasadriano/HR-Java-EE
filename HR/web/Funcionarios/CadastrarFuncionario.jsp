@@ -27,6 +27,8 @@
            
            FuncionariosDAO objFuncionariosDAO = new FuncionariosDAO();
            objFuncionariosDAO.Cadastrar(objFuncionariosDTO);
+           
+            response.sendRedirect("ListarFuncionario.jsp");
                } catch (Exception e) {
                }
             

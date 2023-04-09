@@ -26,8 +26,8 @@
             ResultSet rSetUSR = objUsuariosDAO.LoginUsr(objUsuariosDTO);
             
             if (rSetUSR.next()) {
-                    RequestDispatcher rd = request.getRequestDispatcher("Home.html");
-                    rd.forward(request, response);
+                    response.sendRedirect("../Funcionarios/Funcionarios.html");
+                    
                 } else {
                  RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
                     rd.forward(request, response);
