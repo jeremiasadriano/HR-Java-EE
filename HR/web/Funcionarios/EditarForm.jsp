@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="../css/ExcluirForm.css"/>
     </head>
     <body>
-           <form action="EditarFuncionario.jsp" method="post" accept-charset="UTF-8">
+      <form action="EditarFuncionario.jsp" method="post" accept-charset="UTF-8">
       <h2>Editar Funcinários</h2>
       <div>
         <label for="idFunc">ID:</label>

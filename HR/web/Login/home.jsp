@@ -15,38 +15,32 @@
         <link rel="stylesheet" href="../css/home.css"/>
     </head>
     <body>
-        <div class="slideshow-container">
-
-          <!-- Full-width images with number and caption text -->
-          <div class="mySlides fade">
-            <img src="../img/slideshow/1.jpg" >
-          </div>  
-
-          <div class="mySlides fade">
-            <img src="../img/slideshow/3.jpg" >
+        <div class="main">
+          <div class="slideshow-container">
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+              <img src="../img/slideshow/1.jpg" >
+            </div>
+            <div class="mySlides fade">
+              <img src="../img/slideshow/3.jpg" >
+            </div>
+            <div class="mySlides fade">
+              <img src="../img/slideshow/4.jpg" >
+            </div>
           </div>
-
-          <div class="mySlides fade">
-            <img src="../img/slideshow/4.jpg" >
-          </div>
-
-        </div>
-
-
-        <div class="main-buttons">
-          <h2>Gestão de Recursos Humanos</h2>
-
-          <div class="motivacao">
-            <p>"O sucesso de uma empresa depende do talento e da dedicação de sua equipe. Como departamento de recursos humanos, temos a oportunidade de atrair, desenvolver e reter os melhores profissionais para alcançarmos juntos nossos objetivos. Sigamos trabalhando juntos para construir uma equipe forte e bem-sucedida!"</p>
-          </div>
-          <div class="buttons">
-              <form action="../Funcionarios/TelaFuncionarios.jsp">
-                <button><i class="fa-solid fa-people-group"></i>Funcionários</button>
-              </form>
-              <form action="">
-                <button><i class="fa-sharp fa-solid fa-code-branch"></i>departamento</button>
-              </form>
-
+          <div class="main-buttons">
+            <h2>Gestão de Recursos Humanos</h2>
+            <div class="motivacao">
+              <p>"O sucesso de uma empresa depende do talento e da dedicação de sua equipe. Como departamento de recursos humanos, temos a oportunidade de atrair, desenvolver e reter os melhores profissionais para alcançarmos juntos nossos objetivos. Sigamos trabalhando juntos para construir uma equipe forte e bem-sucedida!"</p>
+            </div>
+            <div class="buttons">
+                <form action="../Funcionarios/TelaFuncionarios.jsp">
+                  <button><i class="fa-solid fa-people-group"></i>Funcionários</button>
+                </form>
+                <form action="">
+                  <button><i class="fa-sharp fa-solid fa-code-branch"></i>departamento</button>
+                </form>
+            </div>
           </div>
         </div>
 
