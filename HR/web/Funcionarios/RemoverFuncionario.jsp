@@ -23,7 +23,7 @@
            FuncionariosDAO objFuncionariosDAO = new FuncionariosDAO();
            objFuncionariosDAO.Remover(objFuncionariosDTO);
            
-           RequestDispatcher rd = request.getRequestDispatcher("ListarFuncionario.jsp");
+           RequestDispatcher rd = request.getRequestDispatcher("TelaFuncionarios.jsp");
            rd.forward(request, response);
                } catch (Exception e) {
                }
