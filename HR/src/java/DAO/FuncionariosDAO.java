@@ -10,9 +10,7 @@ public class FuncionariosDAO {
     Connection conexao;
     PreparedStatement prepS;
     ResultSet rSet;  
-    /**
-     * 
-     */
+   
     public void Cadastrar(FuncionariosDTO objFuncionariosDTO) throws ClassNotFoundException{
         String sql = "insert into tbFuncionarios(Nome, Idade, Sexo, Email, Cargo, Telefone) values(?,?,?,?,?,?)";
         conexao = new ConexaoDAO().conexaoBD();
@@ -80,5 +78,23 @@ public class FuncionariosDAO {
         }
 
         return listaFuncionarios;
+    }
+   
+     public void Remover(FuncionariosDTO objFuncionariosDTO) throws ClassNotFoundException {
+        String sql = "delete from tbFuncionarios where Id_Funcionario=?";
+        conexao = new ConexaoDAO().conexaoBD();
+
+        try {
+            prepS = conexao.prepareStatement(sql);
+
+            prepS.setInt(1, objFuncionariosDTO.getIdFuncionario());
+
+            prepS.execute();
+            prepS.close();
+
+        } catch (SQLException e) {
+
+        }
+
     }
 }
