@@ -106,6 +106,8 @@ public class FuncionariosDAO {
         conexao = new ConexaoDAO().conexaoBD();
 
         try{
+            prepS= conexao.prepareStatement(sql);
+            
             prepS.setString(1, objFuncionariosDTO.getNome());
             prepS.setInt(2, objFuncionariosDTO.getIdade());
             prepS.setString(3, objFuncionariosDTO.getSexo());
