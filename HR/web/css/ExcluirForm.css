@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(to right, #15074e, #8675eb);
+}
+
+form:first-child {
+  background-color: #15074e;
+  color: #f9f9fc;
+  border: solid grey;
+  padding: 1rem;
+  border-radius: 2rem;
+  height: 50rem;
+  width: 50rem;
+  position: relative;
+}
+
+form h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  padding: 1rem;
+  text-transform: uppercase;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+}
+
+form div {
+  display: flex;
+  margin: 1rem;
+  font-size: 1.5rem;
+}
+
+form div label {
+  font-weight: bold;
+}
+
+form>div>input,
+p, select {
+  background: transparent;
+  color: #ccc;
+  font-size: 1.5rem;
+  border: none;
+  outline: none;
+  margin-left: 2rem;
+<<<<<<< Updated upstream
+=======
+  border-bottom: 1px solid #8675eb;
+  min-width: fit-content;
+>>>>>>> Stashed changes
+}
+
+form:first-child button {
+  position: absolute;
+  bottom: 2rem;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 3rem;
+  border: none;
+  border-radius: 1rem;
+  color: #f9f9fc;
+  background-color: rgba(250, 42, 42, 0.747);
+  margin: 0 20%;
+}
+
+.voltar{
+  position: absolute;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 3rem;
+  border: none;
+<<<<<<< Updated upstream
+  bottom: 7.7rem;
+=======
+  bottom: 11rem;
+>>>>>>> Stashed changes
+  left: 60rem;
+  border-radius: 1rem;
+  color: #f9f9fc;
+  background-color: rgba(41, 138, 12, 0.747);
+}
+
+
+button:hover {
+  box-shadow: 0 0 20px 0 rgba(124, 102, 214, 0.644);
+}
