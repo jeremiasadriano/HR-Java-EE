@@ -18,7 +18,7 @@ public class FuncionariosDAO {
      * 
      */
     public void Cadastrar(FuncionariosDTO objFuncionariosDTO) throws ClassNotFoundException {
-        String sql = "insert into tbFuncionarios(Nome, Idade, Sexo, Email, Cargo, Telefone) values(?,?,?,?,?,?)";
+        String sql = "insert into tbFuncionarios(Nome, Idade, Sexo, Email, Cargo, Departamento, Telefone) values(?,?,?,?,?,?,?)";
         conexao = new ConexaoDAO().conexaoBD();
 
         try {
@@ -29,7 +29,8 @@ public class FuncionariosDAO {
             prepS.setString(3, objFuncionariosDTO.getSexo());
             prepS.setString(4, objFuncionariosDTO.getEmail());
             prepS.setString(5, objFuncionariosDTO.getCargo());
-            prepS.setString(6, objFuncionariosDTO.getTelefone());
+            prepS.setString(6, objFuncionariosDTO.getDepartamento());
+            prepS.setString(7, objFuncionariosDTO.getTelefone());
 
             prepS.execute();
             prepS.close();
@@ -55,6 +56,7 @@ public class FuncionariosDAO {
                 objFuncionariosDTO.setSexo(rSet.getString("Sexo"));
                 objFuncionariosDTO.setEmail(rSet.getString("Email"));
                 objFuncionariosDTO.setCargo(rSet.getString("Cargo"));
+                objFuncionariosDTO.setDepartamento(rSet.getString("Departamento"));
                 objFuncionariosDTO.setTelefone(rSet.getString("Telefone"));
 
                 // lista para armazenar cada linha da tabela

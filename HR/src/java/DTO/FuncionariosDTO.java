@@ -7,6 +7,7 @@ public class FuncionariosDTO {
     private String Sexo;
     private String Email;
     private String Cargo;
+    private String Departamento;
     private String Telefone;
 
 //    public FuncionariosDTO(int idFuncionario, String nome, int idade, String sexo, String email, String cargo,
@@ -68,6 +69,13 @@ public class FuncionariosDTO {
         Cargo = cargo;
     }
 
+    public String getDepartamento() {
+        return Departamento;
+    }
+    public void setDepartamento(String departamento) {
+        Departamento = departamento;
+    }
+    
 
     public String getTelefone() {
         return Telefone;
