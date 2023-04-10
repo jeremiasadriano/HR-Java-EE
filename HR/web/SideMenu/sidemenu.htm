@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/SideMenu.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="menuFdd" class="sideMenu">
+        <a href="javascript:void(0)" class="closebtn" onclick="fecharMenu()">&times;</a>
+        <a href="#">Home</a>
+        <a href="#">Departamentos</a>
+        <a href="#">Funcionarios</a>
+        <a href="#">Eventos</a>
+        <a href="#">Sair</a>
+      </div>
+      
+      <!-- Podem usar qqr elemento aqui, eu usei span pq n to 
+    com moral de ir procurar icone de menu hamburger 
+    Unico detalhe e' n remover o onclick e meu metodo-->
+      <span onclick="abrirMenu()">Abrir menu</span>
+      
+      <!-- vcs podem n copiar essa parte, esta aqui so pra explicar -->
+      <div id="main">
+            <div> Vosso codigo entra aqui</div>
+      </div>
+
+      <script src="../JS/SideMenu.js"></script>
+</body>
+</html>
