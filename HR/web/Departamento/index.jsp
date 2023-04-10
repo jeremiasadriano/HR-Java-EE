@@ -111,7 +111,7 @@
                         <a href="../Login/home.jsp"><i class="fa-solid fa-compass"></i>Home</a>
                     </li>
                     <li>
-                        <a href="index.jsp"><i class="fa-solid fa-people-group"></i>Departamentos</a>
+                        <a href="../Noticia/Eventos.htm"><i class="fa-solid fa-people-group"></i>Departamentos</a>
                     </li>
                     <li><i class="fa-solid fa-newspaper"></i>Noticia</li>
                     <li>

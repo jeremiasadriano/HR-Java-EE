@@ -40,6 +40,9 @@
                 <form action="../Departamento/index.jsp">
                   <button><i class="fa-sharp fa-solid fa-code-branch"></i>departamento</button>
                 </form>
+                 <form action="../Noticias/Eventos.htm">
+                  <button><i class="fa-sharp fa-solid fa-code-branch"></i>Notícias</button>
+                </form>
             </div>
           </div>
         </div>

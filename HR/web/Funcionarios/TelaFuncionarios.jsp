@@ -22,20 +22,27 @@
         <title>Funcionários</title>
         <link rel="stylesheet" href="../css/FuncionariosTela.css" />
         <link rel="stylesheet" href="../css/FuncionariosTela2.css"/>
-
-
+        <link rel="stylesheet" href="../css/SideMenu.css"/>
+        <script src="../JS/SideMenu.js"></script>
         <script src="https://kit.fontawesome.com/7a342b9685.js" crossorigin="anonymous"></script>
     </head>
 
     <body>    
-        <div class="main">
+        <div id="menuFdd" class="sideMenu">
+        <a href="javascript:void(0)" class="closebtn" onclick="fecharMenu()">&times;</a>
+        <a href="../Login/home.jsp">Home</a>
+        <a href="../Departamento/index.jsp">Departamentos</a>
+        <a href="TelaFuncionarios.jsp">Funcionarios</a>
+        <a href="../Noticias/Eventos.htm">Eventos</a>
+      </div>
+        <div id"main">
             <div class="container">
                 <div class="top-menu">
                     <h2>FUNCIONÁRIOS</h2>
                     <ul>
                         <li>
-                            <form action="../Login/home.jsp">
-                                <button> <i class="fa-sharp fa-solid fa-house"></i>Home</button>
+                            <form action="">
+                                <button  type="button" onclick="abrirMenu()"> <i class="fa-sharp fa-solid fa-house"></i>Menu</button>
                             </form>
                         </li>
                         <li>
@@ -79,7 +86,7 @@
                     %>
                     <div class="card-container">
                         <div class="card-image">
-                            <img src="../img/profilee.png" alt="" />
+                            <img src="../img/slideshow/profilee.png" alt="" />
                             <div>
                                 <form action="EditarForm.jsp" method="POST">
                                     <input type="hidden" name="id" value="<%= f.getIdFuncionario()%>" />
