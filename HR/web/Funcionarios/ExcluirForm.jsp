@@ -48,7 +48,7 @@ mutizo --%>
             </div>
             <div>
                 <label for="txtdepartamento">Departamento:</label>
-                       <input type="text" name="departamento" id="txttelefone" value="<%=request.getParameter("departamento")%>" required/>
+                       <input type="text" name="departamento" id="txttelefone" value="<%=request.getParameter("departamento")%>" readonly required/>
             </div>
             <button>Remover</button>
         </form>

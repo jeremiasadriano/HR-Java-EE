@@ -185,30 +185,30 @@
                 <table>
                     <form action="./EditarDepartamento.jsp" method="post">
                         <tr>
-                            <td>Nome:   
+                            <td>Nome: <%= request.getParameter("nome")%>  
                             </td>
                         </tr>
                         <tr>
-                            <td>Idade:
+                            <td>Idade: <%= request.getParameter("idade")%> 
                             </td>
                         </tr>
                         <tr>
-                            <td>Sexo:
+                            <td>Sexo: <%= request.getParameter("sexo")%> 
                             </td>
                         </tr>
-                        <td>Email:
+                        <td>Email: <%= request.getParameter("email")%> 
                         </td>
                         </tr>
                         <tr>
-                            <td>Cargo:
+                            <td>Cargo: <%= request.getParameter("cargo")%> 
                             </td>
                         </tr>
                         <tr>
-                            <td>Telefone:</td>
+                            <td>Telefone: <%= request.getParameter("cargo")%> </td>
                         </tr>
                         <tr>
                             <td>
-                                <input type="text" name="departamento"/>
+                                <input type="text" name="departamento" value="<%= request.getParameter("departamento")%> "/>
                             </td>
                         <tr>
                             <td>

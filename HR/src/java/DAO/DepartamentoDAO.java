@@ -1,6 +1,8 @@
 package DAO;
 
 import DTO.DepartamentoDTO;
+import DTO.DepartamentoDTO2;
+import DTO.FuncionariosDTO;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -31,50 +33,9 @@ public class DepartamentoDAO {
         return lista;
     }
 
-    public List<DepartamentoDTO> listaDepartamento() {
-        String sql = "select * from tbFuncionarios where Departamento='TI';";
-        ArrayList<DepartamentoDTO> lista = new ArrayList<>();
-        try {
-            status = conectar.prepareStatement(sql);
-            result = status.executeQuery();
-            while (result.next()) {
-                f.setNome(result.getString("Nome"));
-                f.setIdade(result.getInt("Idade"));
-                f.setSexo(result.getString("Sexo"));
-                f.setEmail(result.getString("Email"));
-                f.setCargo(result.getString("Cargo"));
-                f.setTelefone(result.getString("Telefone"));
-                f.setDepartamento(result.getString("Departamento"));
-                lista.add(f);
-            }
-        } catch (Exception e) {
-            System.out.println("Erro ao exibir departamento: " + e);
-        }
-        return lista;
-    }
 
-    public List<DepartamentoDTO> exibirDepartamento() {
-        String sql = "select * from tbFuncionarios order by Departamento;";
-        ArrayList<DepartamentoDTO> lista = new ArrayList<>();
-        try {
-            status = conectar.prepareStatement(sql);
-            result = status.executeQuery();
-            while (result.next()) {
-                f.setNome(result.getString("Nome"));
-                f.setIdade(result.getInt("Idade"));
-                f.setSexo(result.getString("Sexo"));
-                f.setEmail(result.getString("Email"));
-                f.setCargo(result.getString("Cargo"));
-                f.setTelefone(result.getString("Telefone"));
-                f.setDepartamento(result.getString("Departamento"));
-                lista.add(f);
-            }
-        } catch (Exception e) {
-            System.out.println("Erro ao exibir departamento: " + e);
-        }
-        return lista;
-    }
 
+    
     public List<DepartamentoDTO> user() {
         String sql = "select Username from tbUsuarios;";
         ArrayList<DepartamentoDTO> lista = new ArrayList<>();
@@ -109,6 +70,8 @@ public class DepartamentoDAO {
 
                 lista.add(f);
             }
+            status.close();
+            result.close();
         } catch (Exception ex) {
             System.out.println("Erro ao exibir departamento: " + ex);
         }
@@ -144,6 +107,8 @@ public class DepartamentoDAO {
                 f.setDepartamento(result.getString("Departamento"));
                 lista.add(f);
             }
+            status.close();
+            result.close();
         } catch (Exception e) {
             System.out.println("Erro ao exibir departamento: " + e);
         }
@@ -166,6 +131,8 @@ public class DepartamentoDAO {
                 f.setDepartamento(result.getString("Departamento"));
                 lista.add(f);
             }
+            status.close();
+            result.close();
         } catch (Exception e) {
             System.out.println("Erro ao exibir departamento: " + e);
         }
@@ -188,9 +155,34 @@ public class DepartamentoDAO {
                 f.setDepartamento(result.getString("Departamento"));
                 lista.add(f);
             }
+            status.close();
+            result.close();
         } catch (Exception e) {
             System.out.println("Erro ao exibir departamento: " + e);
         }
         return lista;
     }
+    
+     public List<DepartamentoDTO2> listarDepartamentoNome() {
+        String sql = "select * from tbdepartamentos;";
+        ArrayList<DepartamentoDTO2> lista = new ArrayList<>();
+        try {
+            status = conectar.prepareStatement(sql);
+            result = status.executeQuery();
+            while (result.next()) {
+                DepartamentoDTO2 f1 = new DepartamentoDTO2();
+                f1.setId_Departamento(result.getString(1));
+                f1.setNome_Departamento(result.getString(2));
+               
+                lista.add(f1);
+            }
+            
+            status.close();
+            result.close();
+        } catch (Exception e) {
+            System.out.println("Erro ao exibir departamento: " + e);
+        }
+        return lista;
+    }
+    
 }

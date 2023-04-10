@@ -20,7 +20,8 @@
         DepartamentoDAO dao = new DepartamentoDAO();
         f.setDepartamento(request.getParameter("departamento"));
         dao.editarSelecionar(f);
-
+        
+        request.getRequestDispatcher("index.jsp").forward(request, response);
 %>
 
 </body>
