@@ -229,11 +229,23 @@
                                         <td><%=listar.get(i).getSexo()%>
                                         </td>
                                         <td>
-                                            <a href="./DepartamentoEditar.jsp?Nome=<%=listar.get(i).getNome()%>"
+                                            <!--<a href="./DepartamentoEditar.jsp?Nome=<%--listar.get(i).getNome()--%>"
                                                style="
                                             text-decoration: none;
                                             color: #6c7293;"
-                                            >Editar</a>
+                                            >Editar</a>-->
+                                               <form action="DepartamentoEditar.jsp">
+                                                   <input type="hidden" value="<%=listar.get(i).getNome()%>" name="nome">
+                                                   <input type="hidden" value="<%=listar.get(i).getNome()%>" name="idade">
+                                                   <input type="hidden" value="<%=listar.get(i).getNome()%>" name="sexo">
+                                                   <input type="hidden" value="<%=listar.get(i).getNome()%>" name="email">
+                                                   <input type="hidden" value="<%=listar.get(i).getNome()%>" name="cargo">
+                                                   <input type="hidden" value="<%=listar.get(i).getNome()%>" name="telefone">
+                                                   <input type="hidden" value="<%=listar.get(i).getNome()%>" name="departamento">
+                                                   
+                                                   
+                                                   <button>Editar</button>
+                                               </form>
                                         </td>
                                     </tr>
                                     <%

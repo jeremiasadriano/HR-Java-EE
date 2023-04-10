@@ -185,7 +185,7 @@
                 <table>
                     <form action="./EditarDepartamento.jsp" method="post">
                         <tr>
-                            <td>Nome:
+                            <td>Nome:   
                             </td>
                         </tr>
                         <tr>
