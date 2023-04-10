@@ -39,7 +39,7 @@
                             </form>
                         </li>
                         <li>
-                            <form action="">
+                            <form action="../index.htm">
                                 <button><i class="fa-solid fa-right-from-bracket"></i>logout</button>
                             </form>
                         </li>

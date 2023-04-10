@@ -6,7 +6,7 @@ import java.sql.DriverManager;
 
 public class ConexaoDepartamento {
     private static final String USER = "root";
-    private static final String PASS = "Jeremias1";
+    private static final String PASS = "";
     private static final String URL = "jdbc:mysql://localhost:3306/bdGestaoRH?";
     private static final String DRIVER = "com.mysql.cj.jdbc.Driver";
     private static Connection connectaction = null;

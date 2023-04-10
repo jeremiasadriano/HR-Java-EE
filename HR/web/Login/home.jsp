@@ -37,7 +37,7 @@
                 <form action="../Funcionarios/TelaFuncionarios.jsp">
                   <button><i class="fa-solid fa-people-group"></i>Funcionários</button>
                 </form>
-                <form action="">
+                <form action="../Departamento/index.jsp">
                   <button><i class="fa-sharp fa-solid fa-code-branch"></i>departamento</button>
                 </form>
             </div>

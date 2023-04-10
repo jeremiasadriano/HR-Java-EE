@@ -15,7 +15,7 @@
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="./Style/style.css"/>
+    <link rel="stylesheet" href="../css/Departamento.css"/>
     <script src="https://kit.fontawesome.com/1f168297b1.js"
             crossorigin="anonymous"
     ></script>
@@ -71,7 +71,7 @@
 <main>
     <section class="left-side">
         <div class="name">
-            <img src="./Img/man.png" alt="Imagem Masculina"/>
+            <img src="../img/man.png" alt="Imagem Masculina"/>
             <h2>
                 <%
                     try {
@@ -108,14 +108,14 @@
             <nav>
                 <ul>
                     <li>
-                        <a href="#"><i class="fa-solid fa-compass"></i>Home</a>
+                        <a href="../Login/home.jsp"><i class="fa-solid fa-compass"></i>Home</a>
                     </li>
                     <li>
                         <a href="index.jsp"><i class="fa-solid fa-people-group"></i>Departamentos</a>
                     </li>
                     <li><i class="fa-solid fa-newspaper"></i>Noticia</li>
                     <li>
-                        <a href=""><i class="fa-solid fa-right-from-bracket"></i>Logout</a>
+                        <a href="../index.htm"><i class="fa-solid fa-right-from-bracket"></i>Logout</a>
                     </li>
                 </ul>
             </nav>
@@ -229,7 +229,7 @@
                                         <td><%=listar.get(i).getSexo()%>
                                         </td>
                                         <td>
-                                            <a href="./Pages/DepartamentoEditar.jsp?Nome=<%=listar.get(i).getNome()%>"
+                                            <a href="./DepartamentoEditar.jsp?Nome=<%=listar.get(i).getNome()%>"
                                                style="
                                             text-decoration: none;
                                             color: #6c7293;"
@@ -252,6 +252,6 @@
         </div>
     </section>
 </main>
-<script src="./Js/index.js"></script>
+<script src="../JS/Departamento.js"></script>
 </body>
 </html>
